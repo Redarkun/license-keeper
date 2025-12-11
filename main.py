@@ -1846,22 +1846,11 @@ class MainWindow(QMainWindow):
         <p><b>Version {APP_VERSION}</b></p>
         <p>{APP_DESCRIPTION}</p>
         <p><br></p>
-        <p>A desktop application for managing digital assets and their licenses.</p>
         <p>Keep track of where you got your assets, what licenses they have,<br>
         and where you're using them in your projects.</p>
         <p><br></p>
-        <p><b>Features:</b></p>
-        <ul>
-        <li>Project and asset organization</li>
-        <li>License tracking with auto-completion</li>
-        <li>Sortable and filterable asset lists</li>
-        <li>Export to TXT/MD formats</li>
-        </ul>
-        <p><br></p>
-        <p>Made with ❤️ for game developers, designers, and creators<br>
-        who care about proper asset attribution.</p>
-        <p><br></p>
-        <p><i>License: {APP_LICENSE}</i></p>
+        <p>Created by {APP_AUTHOR}</p>
+        <p>License: {APP_LICENSE}</p>
         </body></html>"""
         
         QMessageBox.about(self, f"About {APP_NAME}", about_text)
