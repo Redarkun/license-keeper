@@ -7,7 +7,7 @@ This project uses the following third-party assets and resources:
 ## Orbitron Font
 
 **Designer:** Matt McInerney  
-**Source:** [The League of Orbitron](https://github.com/theleagueof/orbitron)  
+**Source:** https://github.com/theleagueof/orbitron  
 **License:** SIL Open Font License, Version 1.1
 
 ### Copyright Notice
