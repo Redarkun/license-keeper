@@ -152,6 +152,6 @@ If you encounter any issues or have suggestions, please open an issue on GitHub.
 
 Made for game developers, designers, and creators who care about proper asset attribution.
 
-## Credits
+## Third-Party Assets
 
-**Application Icon**: License icon from [SVG Repo](https://www.svgrepo.com/svg/508106/license) by scarlab (MIT License)
+This project uses third-party fonts and icons. For full attribution and license information, see [ATTRIBUTIONS.md](ATTRIBUTIONS.md).
