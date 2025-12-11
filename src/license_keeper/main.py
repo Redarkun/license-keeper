@@ -44,7 +44,8 @@ APP_LICENSE = "MIT"
 
 # --- Paths & basic folders -----------------------------------------------
 
-APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+# APP_ROOT is the project root (two levels up from this file)
+APP_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_DIR = os.path.join(APP_ROOT, "data")
 EXPORTS_DIR = os.path.join(APP_ROOT, "exports")
 
@@ -705,7 +706,7 @@ class MainWindow(QMainWindow):
 
         # --- Load Orbitron font --------------------------------------------
         font_path = os.path.join(
-            os.path.dirname(__file__),
+            APP_ROOT,
             "fonts",
             "Orbitron-Regular.ttf",
         )

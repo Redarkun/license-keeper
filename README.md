@@ -8,10 +8,10 @@
 
 ## Screenshots
 
-![License Keeper - Main Interface](capturas/Captura%20app%20completa.png)
+![License Keeper - Main Interface](docs/screenshots/Captura%20app%20completa.png)
 *Main interface showing project management, asset tracking, and sortable/filterable asset lists*
 
-![About Dialog](capturas/aboutcaptura.png)
+![About Dialog](docs/screenshots/aboutcaptura.png)
 *About dialog with application information*
 
 ## Features
@@ -48,7 +48,7 @@
 
 1. Clone or download this repository:
 ```bash
-git clone https://github.com/yourusername/license-keeper.git
+git clone https://github.com/Redarkun/license-keeper.git
 cd license-keeper
 ```
 
@@ -59,8 +59,10 @@ pip install -r requirements.txt
 
 3. Run the application:
 ```bash
-python main.py
+python src/license_keeper/main.py
 ```
+
+Or on Windows, simply double-click `LicenseKeeper.bat`
 
 ## Usage
 
