@@ -44,10 +44,31 @@ APP_LICENSE = "MIT"
 
 # --- Paths & basic folders -----------------------------------------------
 
-# APP_ROOT is the project root (two levels up from this file)
-APP_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-DATA_DIR = os.path.join(APP_ROOT, "data")
-EXPORTS_DIR = os.path.join(APP_ROOT, "exports")
+def get_app_root():
+    """Get application root directory.
+    
+    When running as PyInstaller executable, use sys._MEIPASS for bundled resources.
+    When running from source, use project root directory.
+    """
+    if getattr(sys, 'frozen', False):
+        # Running as compiled executable (PyInstaller)
+        return sys._MEIPASS
+    else:
+        # Running from source - APP_ROOT is the project root (two levels up from this file)
+        return os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+APP_ROOT = get_app_root()
+
+# Data and exports should always be in the user's directory, not in executable
+if getattr(sys, 'frozen', False):
+    # When frozen, put data next to the executable
+    EXEC_DIR = os.path.dirname(sys.executable)
+    DATA_DIR = os.path.join(EXEC_DIR, "data")
+    EXPORTS_DIR = os.path.join(EXEC_DIR, "exports")
+else:
+    # When running from source, use project root
+    DATA_DIR = os.path.join(APP_ROOT, "data")
+    EXPORTS_DIR = os.path.join(APP_ROOT, "exports")
 
 os.makedirs(DATA_DIR, exist_ok=True)
 os.makedirs(EXPORTS_DIR, exist_ok=True)
